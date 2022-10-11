@@ -916,23 +916,43 @@ MonoBehaviour:
     entirely sufficient. This may be a bit radical, but only bold risks will pay
     off most abundantly. If countries really had the will to pursue nuclear disarmament,
     it is clear that numbers would not be the biggest issue.
-  - Our initiative was rejected by the leaders. For various reasons, they all expressed
+  - Our initiative was rejected by other leaders. For various reasons, they all expressed
     that "25 warheads is not enough." Their concerns stemmed from either a possible
     war or a larger nuclear arsenal for those new nuclear powers that did not attend
     the conference. After the discussion they increased the number in our initiative
     from keeping 25 warheads to 100 warheads. To be honest, that's not totally unacceptable
     compared to the number we have now. But the final decision is up to you, my president,
     are we going to stick with our proposal?
+  - We revised the content of the initiative as requested and resubmitted it to other
+    leaders. It seems they didn't come up with new excuses for continuing to increase
+    this number and quickly agreed. I think this is a milestone victory worth celebrating,
+    my president, but the conference was not over yet, and the next topic was about
+    the sea-based submarine launched nuclear weapons. We have two possible options
+    regarding this issue. The first is to dismantle only the nuclear warheads but
+    keep the launch capability of these ballistic missile submarines so that they
+    can still be used as launch platforms for conventional weapons. And the second
+    is to require countries to decommission and dismantle all ballistic missile submarines
+    and all the nuclear warheads on them. The former would be more acceptable to
+    the military representatives of most countries, but the latter would save more
+    funds at once. What should we put in our initiative, my president?
+  - It seems the leaders are happy with this initiative! Everyone agreed to sign
+    the initiative and promised to start working on nuclear disarmament as soon as
+    possible. The conference has come to a successful conclusion, my President. So
+    let's depart back to Washington, I can already imagine how everyone will celebrate
+    your success!
   choiceOneDialogue:
   - Let's see how this will go.
   - The Hague would be perfect.
   - Express our concerns.
   - Not bad.
   - Let's make this necessary compromise.
+  - We only need to reduce nuclear warheads.
+  - Let's go home!
   choiceTwoDialogue:
   - Let's go to Nagasaki.
   - Focus on the funds.
   - We will not concede.
+  - Ensure the potential threats are eliminated.
   choiceOne: {fileID: 461642762}
   choiceTwo: {fileID: 1870514142}
   dialogueBox: {fileID: 2060300276}

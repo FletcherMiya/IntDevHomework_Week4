@@ -53,7 +53,14 @@ public class GameManager : MonoBehaviour
             setChoiceOneText();
             setChoiceTwoText();
             choiceTwo.SetActive(true);
-            choiceTwo.SetActive(true);
+        }
+        else if (choiceOneText.text == failingChoiceOne)
+        {
+            SceneManager.LoadScene(scenetoLoad);
+        }
+        else if (choiceOneText.text == winningChoiceOne)
+        {
+            SceneManager.LoadScene(scenetoLoad);
         }
         else if (currentDialogue == openingDialogue && dialogueIndex == 2)
         {
@@ -62,7 +69,6 @@ public class GameManager : MonoBehaviour
             choiceTwoIndex++;
             setDialogueText();
             setChoiceOneText();
-            choiceTwo.SetActive(true);
             choiceTwo.SetActive(false);
         }
         else if (currentDialogue == openingDialogue && dialogueIndex == 3)
@@ -73,14 +79,8 @@ public class GameManager : MonoBehaviour
             setChoiceOneText();
             setChoiceTwoText();
             choiceTwo.SetActive(true);
-            choiceTwo.SetActive(true);
         }
-        else if (choiceOneText.text == failingChoiceOne)
-        {
-            choiceTwo.SetActive(true);
-            SceneManager.LoadScene(scenetoLoad);
-        }
-        else
+        else if (currentDialogue == openingDialogue && dialogueIndex == 4)
         {
             dialogueIndex++;
             choiceOneIndex++;
@@ -90,19 +90,50 @@ public class GameManager : MonoBehaviour
             setChoiceTwoText();
             choiceTwo.SetActive(true);
         }
+        else if (currentDialogue == openingDialogue && dialogueIndex == 5)
+        {
+            dialogueIndex++;
+            choiceOneIndex++;
+            setDialogueText();
+            setChoiceOneText();
+            setChoiceTwoText();
+            choiceTwo.SetActive(false);
+        }
+        else if (currentDialogue == openingDialogue && dialogueIndex == 6)
+        {
+            dialogueBox.text = winningMessage;
+            choiceOneText.text = winningChoiceOne;
+            choiceTwo.SetActive(false);
+        }
+        else
+        {
+            dialogueIndex++;
+            choiceOneIndex++;
+            choiceTwoIndex++;
+            setDialogueText();
+            setChoiceOneText();
+            setChoiceTwoText();
+            choiceTwo.SetActive(false);
+        }
     }
 
     public void advanceDialogueChoiceTwo()
     {
-        if (choiceTwoIndex < 2)
-        {
-            advanceDialogueChoiceOne();
-        }
-        else if (choiceTwoIndex == 2)
+        if (choiceTwoIndex == 2)
         {
             dialogueBox.text = failingMessage;
             choiceOneText.text = failingChoiceOne;
             choiceTwo.SetActive(false);
+        }
+        else if (choiceTwoIndex == 3)
+        {
+            dialogueBox.text = failingMessage;
+            choiceOneText.text = failingChoiceOne;
+            choiceTwo.SetActive(false);
+        }
+        else
+        {
+            advanceDialogueChoiceOne();
         }
     }
 
